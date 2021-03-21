@@ -76,6 +76,9 @@ img {
   background-color: #f5f4fa;
 
   cursor: pointer;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button.primary {
   color: #fff;
@@ -128,7 +131,9 @@ img {
   margin-right: 50px;
 }
 
-.navigation .link {
+.navigation-link {
+  position: relative;
+
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -138,12 +143,27 @@ img {
   line-height: 1;
   letter-spacing: 0.02em;
   color: var(--title-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.navigation .link:hover,
-.navigation .link:focus,
-.navigation .link.current {
+.navigation-link:hover,
+.navigation-link:focus,
+.navigation-link.current {
   color: var(--accent-color);
+}
+.navigation-link::after {
+  display: none;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: var(--accent-color);
+}
+.current.navigation-link::after {
+  display: block;
 }
 
 .contacts-header .link {
@@ -154,6 +174,8 @@ img {
   letter-spacing: 0.02em;
   text-decoration: none;
   color: var(--text-color);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts-header {
   margin-left: auto;
@@ -227,6 +249,8 @@ img {
   background-color: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   cursor: pointer;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-hero:hover,
 .button-hero:focus {
@@ -324,6 +348,8 @@ img {
   border-radius: 50%;
   color: #afb1b8;
   background-color: #fff;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social.link:hover,
 .social.link:focus {
@@ -351,6 +377,9 @@ img {
   border-color: #afb1b8;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .client-link:focus,
 .client-link:hover {
@@ -375,6 +404,8 @@ img {
   line-height: 24px;
   color: #fff;
   text-decoration: none;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .map-link:hover,
 .map-link:focus {
@@ -391,6 +422,8 @@ img {
   font-size: 14px;
   line-height: 1.71;
   color: rgba(255, 255, 255, 0.6);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address-items .link:hover,
 .address-items .link:focus {
@@ -414,6 +447,8 @@ img {
 .social.link.footer-link {
   color: #fff;
   background-color: rgba(255, 255, 255, 0.1);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social.link.footer-link:hover,
 .social.link.footer-link:focus {
@@ -430,6 +465,10 @@ img {
 .portfolio-filter .item + .item {
   margin-left: 8px;
 }
+.portfolio-link {
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .portfolio-link:hover,
 .portfolio-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
