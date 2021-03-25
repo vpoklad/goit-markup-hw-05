@@ -217,7 +217,7 @@ img {
     ),
     url(../images/hero_background.jpg);
 
-  background-position: center;
+  background-position: top, left;
   background-repeat: no-repeat;
   background-size: cover;
   /* background-color: var(--dark-bg-color); */
@@ -367,14 +367,22 @@ img {
   margin-bottom: 16px;
 }
 .socilal-links {
-  display: flex;
+  display: inline-flex;
 }
 .social-links-item:not(:last-child) {
   margin-right: 10px;
 }
+.social-links-item .icon {
+  width: 20px;
+  height: 20px;
+}
+
 .social.link {
-  display: block;
-  padding: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   color: #afb1b8;
   background-color: #fff;
@@ -401,10 +409,11 @@ img {
   margin-right: 30px;
 }
 .client-link {
-  display: block;
-  width: 170px;
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 90px;
-  padding-top: 20px;
   color: #afb1b8;
   border-color: #afb1b8;
   border: 1px solid #afb1b8;
